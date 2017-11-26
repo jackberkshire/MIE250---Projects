@@ -23,4 +23,10 @@ public class StaticDocSource extends DocSource {
 	public String getDoc(int id) {
 		return _documents[id];
 	}
+        
+        public static void main(String args[]) {
+            StaticDocSource test = new io.StaticDocSource();
+            String s = test.getDoc(0);
+            System.out.println(s);
+        }
 }

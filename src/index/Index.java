@@ -46,7 +46,7 @@ public abstract class Index {
 		
 	public abstract void buildIndex(); // Index all files in DocSource
 	
-	public abstract int getDocumentFreq(String term); // Return document frequency of the term
+	public abstract int getDocumentFreq(String term) throws Exception; // Return document frequency of the term
 	
 	public abstract ArrayList<DocScore> getSortedSearchResults(String query); // Return a ranked list of search results for the provided query
 }
