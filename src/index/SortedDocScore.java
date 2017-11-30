@@ -16,22 +16,22 @@ public class SortedDocScore extends DocScore implements Comparable {
     @Override
     public int compareTo(Object o) {
         
-        if (!(o instanceof DocScore))
+        if (!(o instanceof DocScore)) //comes before o
             return -1;
         
         DocScore ds = (DocScore)o;
         
-        if (this._score > ds._score)
+        if (this._score > ds._score) //comes before o
             return -1;
         
-        else if (this._score < ds._score)
+        else if (this._score < ds._score) //comes after o
             return 1;
         
-        else if (this._content.compareTo(ds._content) != 0) {
+        else if (this._content.compareTo(ds._content) != 0) { //alphbeticaly first goes first
                 return this._content.compareTo(ds._content);
         }
         
-        return 0;
+        return 0; //are identical
     }
     
     public static void main(String args[]) {

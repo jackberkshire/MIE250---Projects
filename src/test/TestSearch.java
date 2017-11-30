@@ -49,9 +49,9 @@ public class TestSearch {
         // Do a few queries
         ms_start = System.currentTimeMillis();
         //DoSearch(s, "Jack Berkshire");
-        //DoSearch(s, "computer");
-        //DoSearch(s, "julian");
-        DoSearch(s, "at to of by");
+        DoSearch(s, "Ghana Japan");
+        //DoSearch(s, "hello");
+        //DoSearch(s, "at to of by the it and");
         ms_end = System.currentTimeMillis();
         System.out.println("\n>> Completed searches in " + (ms_end - ms_start) + " ms.");
         System.out.flush(); // If doing a lot of printing, flush the buffer so we don't wait for output

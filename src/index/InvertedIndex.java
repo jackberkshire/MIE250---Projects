@@ -44,6 +44,7 @@ public class InvertedIndex extends Index {
         for (Integer i : scoring.keySet()) { //add all info into sorted set
             set.add(new SortedDocScore(scoring.get(i), i, _docSource.getDoc(i)));
         }
+        //add it all to a treeset
         ArrayList<DocScore> ds = new ArrayList<DocScore>();
         ds.addAll(set);
         

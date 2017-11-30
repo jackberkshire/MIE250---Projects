@@ -15,11 +15,11 @@ public class IndexingTokenizer implements Tokenizer {
         ArrayList<String> ret = new ArrayList<String>();
         
         //keeping hyphens as one word
-        Pattern p = Pattern.compile("(\\w-*)+");
+        Pattern p = Pattern.compile("(\\w-*)+"); 
         Matcher m = p.matcher(s);
         
         while (m.find()) {
-            ret.add(m.group().toLowerCase());
+            ret.add(m.group().toLowerCase()); //make everything to lower case
         }
         return ret;
     }

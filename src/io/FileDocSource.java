@@ -18,18 +18,19 @@ public class FileDocSource extends DocSource {
         String s = null;
         StringBuilder sb = new StringBuilder();
         
+        //read in the file and append next line to string builder
         try {
             BufferedReader fin = new BufferedReader(new FileReader(_files.get(id)));
             
             while ((s = fin.readLine()) != null) {
                 sb.append(s);
             }
-            fin.close();
+            fin.close(); //make sure to close the file
             
         } catch (Exception e) {
             System.out.println("error reading file");
         }
-        return sb.toString();
+        return sb.toString(); 
     }
     
     //returns the number of docs in the search
