@@ -3,8 +3,6 @@ package score;
 import index.Index;
 import io.DocSource;
 import java.lang.Math;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class TFIDFScoringFun implements TermScoringFun {
     
@@ -24,7 +22,7 @@ public class TFIDFScoringFun implements TermScoringFun {
         try { //just copy the formula from the projec doc
             score = Math.log10(((double)_docSource.getNumDocs() / (double)_index.getDocumentFreq(term))) * Math.log10(1.0 + (double)freq);
         } catch (Exception ex) {
-            Logger.getLogger(TFIDFScoringFun.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("logging something bad");
         }
         return score;
     }   

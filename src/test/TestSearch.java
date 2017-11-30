@@ -28,11 +28,11 @@ public class TestSearch {
         //TestIndex(new soln.index.InvertedIndex(new io.StaticDocSource(), 
         //new tokenizer.SimpleTokenizer(), 
         //new score.TFScoringFun()));
-        TestIndex(new soln.index.InvertedIndex(new soln.io.FileDocSource("C://Users//Jack//Documents//Year 2 - Fall//MIE250//Part1"),
+        TestIndex(new soln.index.InvertedIndex(new soln.io.FileDocSource("C://Users//Jack//Documents//Year 2 - Fall//MIE250//Part1//awards_1990"),
                 new soln.tokenizer.IndexingTokenizer(),
                 new soln.score.TFIDFScoringFun()));
 
-        TestIndex(new index.InvertedIndex(new io.FileDocSource("C://Users//Jack//Documents//Year 2 - Fall//MIE250//Part1"),
+        TestIndex(new index.InvertedIndex(new io.FileDocSource("C://Users//Jack//Documents//Year 2 - Fall//MIE250//Part1//awards_1990"),
                 new tokenizer.IndexingTokenizer(),
                 new score.TFIDFScoringFun()));
     }
@@ -48,10 +48,10 @@ public class TestSearch {
         //System.out.println("\n>> Index contents: " + s);
         // Do a few queries
         ms_start = System.currentTimeMillis();
-        DoSearch(s, "jack");
-        DoSearch(s, "billion");
-        DoSearch(s, "canada");
-        //DoSearch(s, "at to of by");
+        //DoSearch(s, "Jack Berkshire");
+        //DoSearch(s, "computer");
+        //DoSearch(s, "julian");
+        DoSearch(s, "at to of by");
         ms_end = System.currentTimeMillis();
         System.out.println("\n>> Completed searches in " + (ms_end - ms_start) + " ms.");
         System.out.flush(); // If doing a lot of printing, flush the buffer so we don't wait for output

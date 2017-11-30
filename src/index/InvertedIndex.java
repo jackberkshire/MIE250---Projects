@@ -17,7 +17,7 @@ public class InvertedIndex extends Index {
         _index = new HashMap<String, HashMap<Integer, Integer>>();
         _docFreq = new HashMap<String, Integer>();
     }
-   
+    
     @Override
     public int getDocumentFreq(String term) {
         return _docFreq.get(term);
