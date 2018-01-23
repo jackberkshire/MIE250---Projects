@@ -49,7 +49,7 @@ public class TestSearch {
         // Do a few queries
         ms_start = System.currentTimeMillis();
         //DoSearch(s, "Jack Berkshire");
-        DoSearch(s, "Ghana Japan");
+        DoSearch(s, "the big bad fox jumped over the sly bear in the");
         //DoSearch(s, "hello");
         //DoSearch(s, "at to of by the it and");
         ms_end = System.currentTimeMillis();
